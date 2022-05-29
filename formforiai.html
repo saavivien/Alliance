@@ -1,0 +1,113 @@
+<html>
+   <head>
+       <title>
+		formulaire pour IAI
+       </title>
+       
+      <script language="javascript">
+              
+		n = parseInt(prompt("entrer votre nombre",""));
+                b = parseInt(prompt("entrer votre base",""));
+                res="";
+                tab=new Array();
+
+                while(n >= b){
+                         r=n%b;
+                         switch(r){
+                           case 10:
+                           tab.push('A');
+                           break;
+                           case 11:
+                           tab.push('B');
+                           break;
+                           case 12:
+                           tab.push('C');
+                           break;
+                           case 13:
+                           tab.push('D');
+                           break;
+                           case 14:
+                           tab.push('E');
+                           break;
+                           case 15:
+                           tab.push('F');
+                           break;
+                           default:
+                           tab.push(r);
+                         }
+                          
+                          n=parseInt(n/b);
+                }
+                tab.push(n);
+                for(i=tab.length-1; i>=0; i--){
+                      res+=tab[i];
+                 }
+                 alert ("votre resultat est : "+ res );                 
+       </script>
+   </head>
+   <body> 
+        <hr>
+           
+            <h3> <center> Les formulaires </center></h3>
+        <hr size=100>
+       <form>
+             nom : <input type="text" name ="nom" size = "30" maxlength= "50"> <br>      
+             description : <TEXTAREA name="nom" rows=4 cols=40>Valeur par d�faut</TEXTAREA><br>
+             date : <SELECT name="nom" color="red"> 
+                      <OPTION>lundi
+                      <OPTION>mardi
+                      <OPTION>mercredi
+                      <OPTION>jeudi
+                      <OPTION>vendredi
+              </SELECT>
+              <br>
+              Veuillez choisir votre type de tarif : <br>
+              <INPUT type= "radio" name="tarif" value="jour"> tarif de jour <br>
+              <INPUT type= "radio" name="tarif" value="nuit"  checked> tarif de nuit <br>
+              <INPUT type= "radio" name="tarif" value="week-end"> tarif de week-end <br>
+              cocher les vos jours de cours <br>
+              <INPUT type="checkbox" name="choix" value="1"  checked> Lundi <br>
+              <INPUT type="checkbox" name="choix" value="2"> Mardi <br>
+              <INPUT type="checkbox" name="choix" value="3"> Mercredi <br>
+              <INPUT type="checkbox" name="choix" value="4"  checked> Jeudi <br>
+              <INPUT type="checkbox" name="choix" value="5"  checked> Vendrdi <br>
+              <INPUT type="checkbox" name="choix" value="6"> Samedi <br>
+
+              <INPUT TYPE="submit" NAME="envoyer" VALUE=" Envoyer ">
+              <INPUT TYPE="reset" NAME="cancel" VALUE=" Annuler">
+        </form>
+        <hr>
+            <h3> <center> Les tableaux </center></h3>
+        <hr>
+        <table border = "1" width="70"> 
+               <tr> 
+                   <td> 1 </td>
+                   <td> 2 </td>
+               </tr>
+               <tr> 
+                   <td> 3 </td>
+                   <td> 4 </td>
+               </tr>
+        </table>
+        <br> 
+        <table border = "1" width="120" cellspacing="10"> 
+               <tr> 
+                   <td> A </td>
+                   <td colspan="2" align="center"> B </td>
+               </tr>
+               <tr> 
+                   <td> C </td>
+                   <td> D </td>
+                   <td rowspan="2"> E </td>
+               </tr>
+               <tr> 
+                   <td> F </td>
+                   <td> G </td>
+               </tr>
+        </table>
+ <audio src="audio/01 1+1.mp3" controls width="20%">   </audio>  <br>
+     
+ <video src="videos/[MP4 480p] CONGO _ CLIP _ YE TE OH - PAPA WEMBA ft OPHELIE WINTER - NOTRE PERE RUMBA.mp4" controls width="50%">    </video>
+
+   </body>
+</html>
